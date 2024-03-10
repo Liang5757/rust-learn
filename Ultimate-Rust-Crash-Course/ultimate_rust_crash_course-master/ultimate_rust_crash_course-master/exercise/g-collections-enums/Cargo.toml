@@ -1,0 +1,15 @@
+[package]
+name = "g-collections-enums"
+version = "0.1.0"
+authors = ["Nathan Stocks <nathan.stocks@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.8.5"
+
+[source.crates-io]
+replace-with = 'rsproxy'
+ 
+# 字节跳动
+[source.rsproxy]
+registry = "https://rsproxy.cn/crates.io-index"
