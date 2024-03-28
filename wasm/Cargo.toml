@@ -1,0 +1,29 @@
+[package]
+name = "wasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+icu = { version = "1.0.0", features = ["experimental"] }
+icu_testdata = { version = "1.0.0", features = ["icu_segmenter"] }
+aho-corasick = "0.7"
+lazy_static = "1"
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 'z'
+debug = false
+debug-assertions = false
+overflow-checks = false
+lto = true
+incremental = false
+codegen-units = 1
+strip = true
+panic = 'abort'
