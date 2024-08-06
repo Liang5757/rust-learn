@@ -1,3 +1,4 @@
+// Enum 类型 和 if let
 enum Message {
     Quit,
     Move { x: i32, y: i32 },

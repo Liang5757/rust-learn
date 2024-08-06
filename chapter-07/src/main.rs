@@ -1,3 +1,4 @@
+// 结构体
 struct User {
     active: bool,
     username: String,
