@@ -31,4 +31,12 @@ fn main() {
 
     let score = if rand::thread_rng().gen::<f64>() > 0.5 { 60 } else { -1 };
     println!("{}", score);
+
+    let val = 4;
+    match val {
+        1 => println!("1!"),
+        2 => println!("2!"),
+        3 => println!("3!"),
+        _ => println!("default!"),
+    }
 }
