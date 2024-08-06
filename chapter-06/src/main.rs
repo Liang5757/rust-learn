@@ -6,7 +6,7 @@ fn main() {
 
     let s3 = String::from("hello");  // s 进入作用域
 
-    let s4 = takes_ownership(s3);             // s 的值移动到函数里 ...
+    let _s4 = takes_ownership(s3);             // s 的值移动到函数里 ...
     // ... 所以到这里不再有效
 
     let x = 5;                      // x 进入作用域
@@ -21,7 +21,7 @@ fn main() {
     println!("The length of '{}' is {}.", s2, len);
 
     let s6 = String::from("hello");
-    let len = calculate_length_v2(&s6);
+    let _len = calculate_length_v2(&s6);
 
     let mut s7 = String::from("hello");
     change(&mut s7);
@@ -46,7 +46,7 @@ fn calculate_length(s: String) -> (String, usize) {
 }
 
 fn calculate_length_v2(s: &String) { // 传递不可变引用
-    s.len();
+    let _ = s.len();
 }
 
 fn change(s: &mut String) { // 传递可变引用
